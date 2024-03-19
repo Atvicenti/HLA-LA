@@ -52,7 +52,7 @@ void BWAmapper::make_sure_ref_is_indexed(std::string referenceGenomeFastaFile)
 
 bool BWAmapper::ref_is_indexed(std::string referenceGenomeFastaFile)
 {
-	std::vector<std::string> suffixes = {".sa", ".ann", ".bwt"};
+	std::vector<std::string> suffixes = {".sa", ".ann", ".bwt",".pac"};
 	for(unsigned int i = 0; i < suffixes.size(); i++)
 	{
 		if(! Utilities::fileExists(referenceGenomeFastaFile + suffixes.at(i)))
